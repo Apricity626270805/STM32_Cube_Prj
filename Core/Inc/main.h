@@ -35,7 +35,7 @@ extern "C" {
 #include "bsp_key.h"
 #include "bsp_usart.h"
 #include "bsp_eeprom.h"
-
+#include "bsp_flash.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

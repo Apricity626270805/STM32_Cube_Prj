@@ -102,18 +102,23 @@ int main(void)
 
     HAL_UART_Receive_IT(&huart1, rx_data, 1);
 
-    for (i = 0; i <= 255; i++)
-    {
-        eeprom_writedata[i] = 0x59;
-        printf("0x%.2X  ", eeprom_writedata[i]);
-    }
-    EEPROM_Write(0,eeprom_writedata, 256);
-    printf("\r\n\r\n");
-	EEPROM_read(0,eeprom_readdata, 256);
-    for (i = 0; i <= 255; i++)
-    {
-		printf("0x%.2X  ", eeprom_readdata[i]);
-    }
+//    for (i = 0; i <= 255; i++)
+//    {
+//        eeprom_writedata[i] = 0x59;
+//        printf("0x%.2X  ", eeprom_writedata[i]);
+//    }
+//    EEPROM_Write(0,eeprom_writedata, 256);
+//    printf("\r\n\r\n");
+//	EEPROM_read(0,eeprom_readdata, 256);
+//    for (i = 0; i <= 255; i++)
+//    {
+//		printf("0x%.2X  ", eeprom_readdata[i]);
+//    }
+
+	
+	
+	printf("0x%.6X  ", SPI_FLASH_ReadID());
+
 
     while (1)
     {

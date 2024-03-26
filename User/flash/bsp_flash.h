@@ -2,6 +2,8 @@
 #define __BSP_FLASH_H__
 
 #include "spi.h"
+#include "gpio.h"
+#include "bsp_usart.h"
 
 #define  FLASH_ID		0XEF4017     //W25Q64
 
@@ -34,9 +36,9 @@
 /************** 命令定义-结尾 ******************/
  
 
-#define SPIx                             SPI1
-                 
-
+#define SPI_FLASH_Handle                hspi1
+#define SPI_FLASH_CS_LOW() 				HAL_GPIO_WritePin(FLASH_CS_GPIO_Port, FLASH_CS_Pin, GPIO_PIN_RESET);                
+#define SPI_FLASH_CS_HIGH()				HAL_GPIO_WritePin(FLASH_CS_GPIO_Port, FLASH_CS_Pin, GPIO_PIN_SET);
 
 /*等待超时时间*/
 #define SPIT_FLAG_TIMEOUT         ((uint32_t)0x1000)
