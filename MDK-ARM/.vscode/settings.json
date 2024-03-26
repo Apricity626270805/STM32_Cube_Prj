@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "bsp_led.h": "c",
+        "gpio.h": "c",
+        "main.h": "c",
+        "bsp_usart.h": "c",
+        "bsp_eeprom.h": "c",
+        "usart.h": "c",
+        "i2c.h": "c",
+        "bsp_flash.h": "c"
+    },
+    "C_Cpp.default.compilerPath": "C:\\mingw64\\bin\\gcc.exe"
+}
