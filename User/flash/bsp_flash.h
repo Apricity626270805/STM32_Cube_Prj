@@ -65,7 +65,7 @@ void SPI_FLASH_WriteEnable(void);
 void SPI_FLASH_WaitForWriteEnd(void);
 
 
-
+uint64_t Read_Unique_ID(void);
 
 
 #endif /* __BSP_FLASH_H__ */

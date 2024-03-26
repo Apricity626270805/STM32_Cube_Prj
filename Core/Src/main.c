@@ -117,8 +117,8 @@ int main(void)
 
 	
 	
-	printf("0x%.6X  ", SPI_FLASH_ReadID());
-
+	//printf("0x%.6X  ", SPI_FLASH_ReadID());
+Read_Unique_ID();
 
     while (1)
     {
