@@ -5,7 +5,7 @@
 #include "gpio.h"
 #include "bsp_usart.h"
 
-#define  FLASH_ID		0XEF4017     //W25Q64
+#define FLASH_ID		                0XEF4017     //W25Q64
 
 //#define SPI_FLASH_PageSize            4096
 #define SPI_FLASH_PageSize              256
@@ -34,24 +34,20 @@
 #define WIP_Flag                  		0x01  /* Write In Progress (WIP) flag */
 #define Dummy_Byte                		0xFF
 /************** 命令定义-结尾 ******************/
- 
-
 #define SPI_FLASH_Handle                hspi1
 #define SPI_FLASH_CS_LOW() 				HAL_GPIO_WritePin(FLASH_CS_GPIO_Port, FLASH_CS_Pin, GPIO_PIN_RESET);                
 #define SPI_FLASH_CS_HIGH()				HAL_GPIO_WritePin(FLASH_CS_GPIO_Port, FLASH_CS_Pin, GPIO_PIN_SET);
 
 /*等待超时时间*/
-#define SPIT_FLAG_TIMEOUT         ((uint32_t)0x1000)
-#define SPIT_LONG_TIMEOUT         ((uint32_t)(10 * SPIT_FLAG_TIMEOUT))
+#define FLASH_TIMEOUT                   1000
 
+HAL_StatusTypeDef SPI_FLASH_ReadID(uint32_t *JedecID);
 
-void SPI_FLASH_Init(void);
 void SPI_FLASH_SectorErase(uint32_t SectorAddr);
 void SPI_FLASH_BulkErase(void);
 void SPI_FLASH_PageWrite(uint8_t* pBuffer, uint32_t WriteAddr, uint16_t NumByteToWrite);
 void SPI_FLASH_BufferWrite(uint8_t* pBuffer, uint32_t WriteAddr, uint16_t NumByteToWrite);
 void SPI_FLASH_BufferRead(uint8_t* pBuffer, uint32_t ReadAddr, uint16_t NumByteToRead);
-uint32_t SPI_FLASH_ReadID(void);
 uint32_t SPI_FLASH_ReadDeviceID(void);
 void SPI_FLASH_StartReadSequence(uint32_t ReadAddr);
 void SPI_Flash_PowerDown(void);
