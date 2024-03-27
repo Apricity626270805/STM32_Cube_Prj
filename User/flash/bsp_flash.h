@@ -16,7 +16,6 @@
 #define W25X_WriteEnable		     	0x06 
 #define W25X_WriteDisable		     	0x04 
 #define W25X_ReadStatusReg1		    	0x05
-#define W25X_ReadStatusReg2		    	0x35
 #define W25X_WriteStatusReg		    	0x01 
 #define W25X_ReadData			        0x03 
 #define W25X_FastReadData		      	0x0B 
@@ -42,26 +41,18 @@
 #define FLASH_TIMEOUT                   1000
 
 HAL_StatusTypeDef SPI_FLASH_ReadID(uint32_t *JedecID);
+HAL_StatusTypeDef SPI_FLASH_WaitForWriteEnd(void);
+void SPI_FLASH_WriteEnable(void);
+void SPI_FLASH_WriteDisable(void);
+void SPI_Flash_PowerDown(void);
+void SPI_Flash_WAKEUP(void);
+void SPI_FLASH_BufferRead(uint32_t ReadAddr, uint8_t* pBuffer, uint16_t NumByteToRead);
+
+
+void SPI_FLASH_BufferWrite(uint8_t* pBuffer, uint32_t WriteAddr, uint16_t NumByteToWrite);
+void SPI_FLASH_PageWrite(uint8_t* pBuffer, uint32_t WriteAddr, uint16_t NumByteToWrite);
 
 void SPI_FLASH_SectorErase(uint32_t SectorAddr);
 void SPI_FLASH_BulkErase(void);
-void SPI_FLASH_PageWrite(uint8_t* pBuffer, uint32_t WriteAddr, uint16_t NumByteToWrite);
-void SPI_FLASH_BufferWrite(uint8_t* pBuffer, uint32_t WriteAddr, uint16_t NumByteToWrite);
-void SPI_FLASH_BufferRead(uint8_t* pBuffer, uint32_t ReadAddr, uint16_t NumByteToRead);
-uint32_t SPI_FLASH_ReadDeviceID(void);
-void SPI_FLASH_StartReadSequence(uint32_t ReadAddr);
-void SPI_Flash_PowerDown(void);
-void SPI_Flash_WAKEUP(void);
-
-
-uint8_t SPI_FLASH_ReadByte(void);
-uint8_t SPI_FLASH_SendByte(uint8_t byte);
-uint16_t SPI_FLASH_SendHalfWord(uint16_t HalfWord);
-void SPI_FLASH_WriteEnable(void);
-void SPI_FLASH_WaitForWriteEnd(void);
-
-
-uint64_t Read_Unique_ID(void);
-
 
 #endif /* __BSP_FLASH_H__ */

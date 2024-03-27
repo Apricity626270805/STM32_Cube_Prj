@@ -9,14 +9,14 @@ project\bsp_flash.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h
 project\bsp_flash.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 project\bsp_flash.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h
 project\bsp_flash.o: ../Drivers/CMSIS/Include/core_cm3.h
-project\bsp_flash.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+project\bsp_flash.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 project\bsp_flash.o: ../Drivers/CMSIS/Include/cmsis_version.h
 project\bsp_flash.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 project\bsp_flash.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 project\bsp_flash.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 project\bsp_flash.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 project\bsp_flash.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-project\bsp_flash.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+project\bsp_flash.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 project\bsp_flash.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 project\bsp_flash.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 project\bsp_flash.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h
@@ -33,8 +33,8 @@ project\bsp_flash.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 project\bsp_flash.o: ../User/led/bsp_led.h
 project\bsp_flash.o: ../Core/Inc/gpio.h
 project\bsp_flash.o: ../Core/Inc/main.h
-project\bsp_flash.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-project\bsp_flash.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+project\bsp_flash.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+project\bsp_flash.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 project\bsp_flash.o: ../User/key/bsp_key.h
 project\bsp_flash.o: ../User/usart/bsp_usart.h
 project\bsp_flash.o: ../Core/Inc/usart.h

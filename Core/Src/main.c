@@ -68,8 +68,8 @@ int main(void)
 {
 
 	/* USER CODE BEGIN 1 */
-
-	uint32_t i = 0;
+	uint16_t i = 0;
+	uint8_t data[256] = {0};
 	/* USER CODE END 1 */
 
 	/* MCU Configuration--------------------------------------------------------*/
@@ -102,12 +102,14 @@ int main(void)
 
 	HAL_UART_Receive_IT(&huart1, rx_data, 1);
 
-	if(SPI_FLASH_ReadID(&i) == HAL_OK)
-	{
-		if(i == 0xEF4017)
-		printf("FLASH_JedecID:0x%lX\r\n",(uint32_t)i);
-	}
+	SPI_Flash_PowerDown();
+	SPI_Flash_WAKEUP();
+	SPI_FLASH_BufferRead(0xFFF, data, 256);
 	
+	for(i=0;i<256;i++)
+	{
+		printf("0x%.2X  ", data[i]);
+	}
 
 	while (1)
 	{
