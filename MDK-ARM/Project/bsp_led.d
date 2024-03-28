@@ -24,6 +24,8 @@ project\bsp_led.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h
 project\bsp_led.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h
 project\bsp_led.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h
 project\bsp_led.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h
+project\bsp_led.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h
+project\bsp_led.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h
 project\bsp_led.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 project\bsp_led.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 project\bsp_led.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h
@@ -40,5 +42,7 @@ project\bsp_led.o: ../User/eeprom/bsp_eeprom.h
 project\bsp_led.o: ../Core/Inc/i2c.h
 project\bsp_led.o: ../User/flash/bsp_flash.h
 project\bsp_led.o: ../Core/Inc/spi.h
+project\bsp_led.o: ../User/adc/bsp_adc.h
+project\bsp_led.o: ../Core/Inc/adc.h
 project\bsp_led.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 project\bsp_led.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

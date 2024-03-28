@@ -23,6 +23,8 @@ project\spi.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h
 project\spi.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h
 project\spi.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h
 project\spi.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h
+project\spi.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc.h
+project\spi.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_adc_ex.h
 project\spi.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 project\spi.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 project\spi.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h
@@ -41,3 +43,5 @@ project\spi.o: ../User/eeprom/bsp_eeprom.h
 project\spi.o: ../Core/Inc/i2c.h
 project\spi.o: ../User/flash/bsp_flash.h
 project\spi.o: ../Core/Inc/spi.h
+project\spi.o: ../User/adc/bsp_adc.h
+project\spi.o: ../Core/Inc/adc.h
