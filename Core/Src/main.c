@@ -69,7 +69,8 @@ int main(void)
 
 	/* USER CODE BEGIN 1 */
 	uint16_t i = 0;
-	uint8_t data[256] = {0};
+	uint8_t tx_data[256] = {0};
+	uint8_t rx_data[256] = {0};
 	/* USER CODE END 1 */
 
 	/* MCU Configuration--------------------------------------------------------*/
@@ -102,13 +103,22 @@ int main(void)
 
 	HAL_UART_Receive_IT(&huart1, rx_data, 1);
 
-	SPI_Flash_PowerDown();
-	SPI_Flash_WAKEUP();
-	SPI_FLASH_BufferRead(0xFFF, data, 256);
-	
 	for(i=0;i<256;i++)
 	{
-		printf("0x%.2X  ", data[i]);
+		tx_data[i]= 0xAA;
+		printf("0x%.2X  ", tx_data[i]);
+	}	
+	printf("\r\n\r\n");
+	
+	SPI_FLASH_SectorErase(0x1000);
+	
+	SPI_FLASH_BufferWrite(0x1000, tx_data, 256);
+	
+	
+	SPI_FLASH_BufferRead(0x1000, rx_data, 256);	
+	for(i=0;i<256;i++)
+	{
+		printf("0x%.2X  ", rx_data[i]);
 	}
 
 	while (1)

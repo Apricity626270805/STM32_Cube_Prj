@@ -7,7 +7,6 @@
 
 #define FLASH_ID		                0XEF4017     //W25Q64
 
-//#define SPI_FLASH_PageSize            4096
 #define SPI_FLASH_PageSize              256
 #define SPI_FLASH_PerWritePageSize      256
 
@@ -49,8 +48,8 @@ void SPI_Flash_WAKEUP(void);
 void SPI_FLASH_BufferRead(uint32_t ReadAddr, uint8_t* pBuffer, uint16_t NumByteToRead);
 
 
-void SPI_FLASH_BufferWrite(uint8_t* pBuffer, uint32_t WriteAddr, uint16_t NumByteToWrite);
-void SPI_FLASH_PageWrite(uint8_t* pBuffer, uint32_t WriteAddr, uint16_t NumByteToWrite);
+void SPI_FLASH_BufferWrite(uint32_t WriteAddr, uint8_t* pBuffer, uint16_t NumByteToWrite);
+void SPI_FLASH_PageWrite(uint32_t WriteAddr, uint8_t* pBuffer, uint16_t NumByteToWrite);
 
 void SPI_FLASH_SectorErase(uint32_t SectorAddr);
 void SPI_FLASH_BulkErase(void);
