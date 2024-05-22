@@ -54,4 +54,8 @@ void SPI_FLASH_PageWrite(uint32_t WriteAddr, uint8_t* pBuffer, uint16_t NumByteT
 void SPI_FLASH_SectorErase(uint32_t SectorAddr);
 void SPI_FLASH_BulkErase(void);
 
+//ÄÚ²¿flash
+HAL_StatusTypeDef STM32_Flash_Write_HalfWord(uint32_t PageAddr, uint16_t *WriteData, uint16_t CountToWrite);
+HAL_StatusTypeDef STM32_Flash_Read_HalfWord(uint32_t PageAddr, uint16_t *ReadData, uint16_t CountToRead);
+
 #endif /* __BSP_FLASH_H__ */

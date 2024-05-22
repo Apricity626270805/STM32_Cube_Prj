@@ -7,7 +7,7 @@
 
 
 uint32_t Get_ADC_V(void);
-
+uint32_t ADC_Output(void);
 
 #endif /* __BSP_ADC_H__ */
 

@@ -29,6 +29,8 @@ project\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 project\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h
 project\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 project\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
+project\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
+project\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 project\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 project\main.o: ../User/led/bsp_led.h
 project\main.o: ../Core/Inc/gpio.h
@@ -44,3 +46,13 @@ project\main.o: ../User/flash/bsp_flash.h
 project\main.o: ../Core/Inc/spi.h
 project\main.o: ../User/adc/bsp_adc.h
 project\main.o: ../Core/Inc/adc.h
+project\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h
+project\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h
+project\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+project\main.o: ../Core/Inc/FreeRTOSConfig.h
+project\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+project\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+project\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+project\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM3/portmacro.h
+project\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+project\main.o: ../Core/Inc/dma.h

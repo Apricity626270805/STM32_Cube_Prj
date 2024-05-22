@@ -231,3 +231,40 @@ void SPI_FLASH_BufferWrite(uint32_t WriteAddr, uint8_t* pBuffer, uint16_t NumByt
 }
 
 
+HAL_StatusTypeDef STM32_Flash_Write_HalfWord(uint32_t PageAddr, uint16_t *WriteData, uint16_t CountToWrite)
+{
+	HAL_StatusTypeDef state = HAL_OK;
+	uint16_t DataIndex = 0;	
+	uint32_t myPageError = 0;
+	FLASH_EraseInitTypeDef FLASH_EraseInitStruct;
+	
+	state = HAL_FLASH_Unlock();
+		
+	FLASH_EraseInitStruct.Banks = FLASH_BANK1_END;
+	FLASH_EraseInitStruct.NbPages = 1;
+	FLASH_EraseInitStruct.PageAddress = PageAddr;
+	FLASH_EraseInitStruct.TypeErase = FLASH_TYPEERASE_PAGES;
+	
+	state = HAL_FLASHEx_Erase(&FLASH_EraseInitStruct, &myPageError);
+
+	for(DataIndex = 0; DataIndex < CountToWrite; DataIndex++)
+	{
+		state = HAL_FLASH_Program(FLASH_TYPEPROGRAM_HALFWORD, (PageAddr+DataIndex*2), WriteData[DataIndex]);
+	}
+	
+	state = HAL_FLASH_Lock();
+	
+	return state;
+}
+
+HAL_StatusTypeDef STM32_Flash_Read_HalfWord(uint32_t PageAddr, uint16_t *ReadData, uint16_t CountToRead)
+{
+	uint16_t DataIndex = 0;	
+	
+	for(DataIndex = 0; DataIndex < CountToRead; DataIndex++)
+	{
+		ReadData[DataIndex] = *(__IO uint32_t*)(PageAddr + DataIndex*2);
+	}
+	return HAL_OK;
+}
+

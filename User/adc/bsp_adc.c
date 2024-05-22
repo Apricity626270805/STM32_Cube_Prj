@@ -9,4 +9,17 @@ uint32_t Get_ADC_V(void)
 	return HAL_ADC_GetValue(&hadc1);
 }
 
+uint32_t ADC_Output(void)
+{
+	uint32_t temp = 0;
+	int i = 0;
+	
+	for(i = 0; i < 1000; i++)
+	{
+		temp = (temp + Get_ADC_V()) / 2;
+	}
+	return temp;
+}
+
+
 
